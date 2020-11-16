@@ -30,7 +30,22 @@
       "dnsServers": null,
       "mountPoints": [],
       "workingDirectory": null,
-      "secrets": null,
+      "secrets": [{
+        "name": "AWS_ACCESS_KEY_ID",
+        "valueFrom": "arn:aws:secretsmanager:us-east-2:783520445878:secret:ecs/nmap-api:AWS_ACCESS_KEY_ID::"
+      }, {
+        "name": "AWS_SECRET_ACCESS_KEY",
+        "valueFrom": "arn:aws:secretsmanager:us-east-2:783520445878:secret:ecs/nmap-api:AWS_SECRET_ACCESS_KEY::"
+      },{
+        "name": "SPRING_ACTIVEMQ_BROKER_URL",
+        "valueFrom": "arn:aws:secretsmanager:us-east-2:783520445878:secret:ecs/nmap-api:SPRING_ACTIVEMQ_BROKER_URL::"
+      },{
+        "name": "SPRING_ACTIVEMQ_USER",
+        "valueFrom": "arn:aws:secretsmanager:us-east-2:783520445878:secret:ecs/nmap-api:SPRING_ACTIVEMQ_USER::"
+      },{
+        "name": "SPRING_ACTIVEMQ_PASSWORD",
+        "valueFrom": "arn:aws:secretsmanager:us-east-2:783520445878:secret:ecs/nmap-api:SPRING_ACTIVEMQ_PASSWORD\t::"
+      }],
       "dockerSecurityOptions": null,
       "memory": null,
       "memoryReservation": 300,
