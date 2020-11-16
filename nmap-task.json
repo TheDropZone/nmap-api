@@ -44,7 +44,7 @@
         "valueFrom": "arn:aws:secretsmanager:us-east-2:783520445878:secret:ecs/nmap-api-eWdRFd:SPRING_ACTIVEMQ_USER::"
       },{
         "name": "SPRING_ACTIVEMQ_PASSWORD",
-        "valueFrom": "arn:aws:secretsmanager:us-east-2:783520445878:secret:ecs/nmap-api-eWdRFd:SPRING_ACTIVEMQ_PASSWORD\t::"
+        "valueFrom": "arn:aws:secretsmanager:us-east-2:783520445878:secret:ecs/nmap-api-eWdRFd:SPRING_ACTIVEMQ_PASSWORD::"
       }],
       "dockerSecurityOptions": null,
       "memory": null,
