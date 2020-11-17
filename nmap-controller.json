@@ -48,7 +48,7 @@
       }],
       "dockerSecurityOptions": null,
       "memory": null,
-      "memoryReservation": 300,
+      "memoryReservation": 500,
       "volumesFrom": [],
       "stopTimeout": null,
       "image": "783520445878.dkr.ecr.us-east-2.amazonaws.com/fortifydata:577a34044d4fecd200e2005542e7bd7d8c64acb9",
@@ -72,7 +72,7 @@
     }
   ],
   "placementConstraints": [],
-  "memory": "512",
+  "memory": "1024",
   "taskRoleArn": "arn:aws:iam::783520445878:role/ecsTaskExecutionRole",
   "compatibilities": [
     "FARGATE"
