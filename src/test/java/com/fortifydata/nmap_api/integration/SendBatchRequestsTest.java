@@ -54,7 +54,7 @@ class SendBatchRequestsTest {
                         return request;
                     }).collect(Collectors.toList());
 
-            for(int i = 0; i < 60 ; i++){
+            for(int i = 0; i < 100 ; i++){
                 hostRequestQueue.sendAll(requests);
             }
         } catch (JMSException e) {

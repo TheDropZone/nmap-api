@@ -28,16 +28,12 @@ public class ClusterController {
 
     private final Logger log = LoggerFactory.getLogger(ClusterController.class);
 
-    @Value("${host.request.queueName}")
     private String hostRequestQueueName;
 
-    @Value("${aws.ecs.clusterName}")
     private String clusterName;
 
-    @Value("${aws.ecs.serviceName}")
     private String serviceName;
 
-    @Value("${aws.ecs.taskName}")
     private String taskName;
 
     private EcsControllerService controller;
@@ -51,7 +47,15 @@ public class ClusterController {
 
     private AtomicBoolean processing = new AtomicBoolean(false);
 
-    public ClusterController(@Autowired AwsConfig awsConfig){
+    public ClusterController(@Value("${aws.ecs.clusterName}") String clusterName,
+                             @Value("${aws.ecs.serviceName}") String serviceName,
+                             @Value("${aws.ecs.taskName}") String taskName,
+                             @Value("${host.request.queueName}") String hostRequestQueueName,
+                             @Autowired AwsConfig awsConfig){
+        this.clusterName = clusterName;
+        this.serviceName = serviceName;
+        this.taskName = taskName;
+        this.hostRequestQueueName = hostRequestQueueName;
         controller = new EcsControllerService(clusterName,serviceName,taskName,hostRequestQueueName,awsConfig);
     }
 
